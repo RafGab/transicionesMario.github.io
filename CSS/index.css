@@ -16,7 +16,7 @@
     animation-duration: 2s;
     /**animation-iteration-count: infinite;*/
     animation-timing-function: linear; /** opciones: linear y steps "dar pasos"*/
-    animation-fill-mode: forwards; /** forwards: Hace que la animación se pare al final / otra opción: both*/
+    animation-fill-mode: forwards; /**Hace que la animación se pare al final / otra opción: both*/
     /**animation-play-state: paused;*/ /**Pausar la animación*/
 
     position: absolute; /**Posición Super Mario*/
