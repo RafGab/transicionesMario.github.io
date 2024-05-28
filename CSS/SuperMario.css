@@ -1,0 +1,172 @@
+/** 0. Fondo */
+
+.principal {
+    min-height: 100vh; /**Ocupa la imagen en todo el fondo "100%"*/
+    background-image: url(../image/TableroSuperMario.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; /**El fondo se fija en relación con la ventana del navegador. No se desplaza con el contenido.scroll: El fondo se desplaza junto con el contenido de la página. Este es el valor predeterminado. local: El fondo se desplaza con el contenido del elemento al que se aplica, pero no se desplaza con el resto de la página.*/
+    background-size: cover; /**Otras opciones: contain*/
+}
+
+/** 1. Animaciones Super Mario */
+.pulser1 img {
+    width: 80px;
+    animation-name: mover1;
+    animation-duration: 2s;
+    /**animation-iteration-count: infinite;*/
+    animation-timing-function: linear; /** opciones: linear y steps "dar pasos"*/
+    animation-fill-mode: forwards; /** forwards: Hace que la animación se pare al final / otra opción: both*/
+    /**animation-play-state: paused;*/ /**Pausar la animación*/
+
+    position: absolute; /**Posición Super Mario*/
+    bottom: 30px;
+    left: 20px,
+}
+
+img:hover {
+    animation-play-state: paused;
+    opacity: 1.7;
+    filter: (150%);
+    cursor: progress;
+}
+
+@keyframes mover1 {
+    from {
+        opacity: 3;
+        transform: translateX(0);
+        
+    }
+    to {
+        opacity: 5;
+        transform: translateX(275px);
+        
+    }
+}
+
+ /** 2. Animaciones para Luigi */
+
+.pulser2 img {
+    width: 210px;
+    animation: 
+    
+    mover2 2s steps(10) both,
+    agrandar 1s linear 2s both;
+
+    position: absolute; /**Posición Luigi*/
+    bottom: 10px;
+    left: 20px;
+}
+
+img:hover {
+    animation-play-state: paused;
+    opacity: .7;
+    cursor: progress;
+}
+
+@keyframes mover2 {
+    from {
+        opacity: 3;
+        transform: translateX(0);
+        
+    }
+    to {
+        opacity: 5;
+        transform: translateX(400px);
+        
+    }
+}
+@keyframes agrandar {
+    0% {
+        scale: 1;
+    }
+    25% {
+        scale: 1.5;
+    }
+    50% {
+        scale: 2;
+    }
+    75% {
+        scale: 1.5;
+    }
+    100% {
+        scale: 2;
+    }
+}
+
+
+/** 3. Animaciones Princesa Peach */
+.pulser3 img {
+    width: 70px;
+    animation-name: mover3;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse; /** opciones animation: "normal", "alternate", reverse" y "alternate-reverse*/
+    animation-fill-mode: forwards; /**animación se pare al final y no regrese al inicio*/
+}
+
+img:hover {
+    animation-play-state: paused;
+    opacity: .7;
+}
+
+@keyframes mover3 {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(440px);
+    }
+}
+
+/** 4. Animaciones para Bowser */
+    .pulser4 img {
+    width: 100px;
+    animation-name: mover4;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(10);
+    animation-direction: alternate-reverse; /*"reverse" y "alternate-reverse" devolver a Bowser*/
+} 
+
+img:hover {
+    animation-play-state: paused;
+    opacity: .9;
+}
+
+@keyframes mover4 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(300px);
+    }
+}
+
+/** 5. Animaciones para Yoshi */
+.pulser5 img {
+    width: 100px;
+    animation-name: mover5;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(10);
+    animation-direction: alternate-reverse;
+
+    position: sticky; /**Posición Yoshi*/
+    top: 250px;
+    left: 500px;
+} 
+
+img:hover {
+    animation-play-state: paused;
+    opacity: .9;
+}
+
+@keyframes mover5 {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(230px);
+    }
+}
